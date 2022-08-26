@@ -6,8 +6,6 @@ console.log(iframe);
 
 
 const player = new Player(iframe, {
-    // id: 19231868,
-    // width: 640
 });
 
 const saveToLocalStorage = function(data) {
