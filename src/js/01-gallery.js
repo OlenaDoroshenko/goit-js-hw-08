@@ -2,12 +2,12 @@
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-const list = document.querySelector(".gallery");
+const list = document.querySelector('.gallery');
 
 // Create gallery
 function createListItemMarkup(array) {
   return array
-    .map((elem) => {
+    .map(elem => {
       const { preview, original, description } = elem;
       return `<a
     class="gallery__item"
@@ -20,11 +20,11 @@ function createListItemMarkup(array) {
     />
   </a>`;
     })
-    .join("");
+    .join('');
 }
 
 function insertListItems(items) {
-  list.insertAdjacentHTML("beforeend", items);
+  list.insertAdjacentHTML('beforeend', items);
 }
 
 const listItemMarkup = createListItemMarkup(galleryItems);
@@ -32,11 +32,11 @@ insertListItems(listItemMarkup);
 
 // simpleLigthBox
 
-import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from 'simplelightbox';
 
-import "simplelightbox/dist/simple-lightbox.min.css";
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 let gallery = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
+  captionsData: 'alt',
+  captionDelay: 250,
 });
